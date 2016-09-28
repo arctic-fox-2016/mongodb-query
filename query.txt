@@ -1,0 +1,20 @@
+1. use akademik
+2. show dbs
+3. use akademik
+4. db.createCollection('prodi')
+5. db.createCollection('mahasiswa')
+6.  var col_list = db.mahasiswa.findOne();
+    for (var col in col_list){ print (col);}
+7.  db.prodi.insert({kode_prodi: "k001", nama_prodi: "kimia", jurusan: "kimia murni"})
+    db.prodi.insert({kode_prodi: "k002", nama_prodi: "katak", jurusan: "katak terbang"})
+    db.prodi.insert({kode_prodi: "k003", nama_prodi: "kaki", jurusan: "kaki gajah"})
+    db.prodi.insert({kode_prodi: "k004", nama_prodi: "kambing", jurusan: "kambing terbang"})
+    db.prodi.insert({kode_prodi: "k005", nama_prodi: "kita", jurusan: "kita bisa"})
+8.  db.mahasiswa.insert({nim: "0001", name: "andrew", alamat: "helo", prodi:{$ref: "prodi", $id: ObjectId("57eb6a1a539649c28e92f1bb"), $db: "mongodbquery"}})
+    db.mahasiswa.insert({nim: "0002", name: "andre", alamat: "helo", prodi:{$ref: "prodi", $id: ObjectId("57eb6901539649c28e92f1b8"), $db: "mongodbquery"}})
+    db.mahasiswa.insert({nim: "0003", name: "andy", alamat: "helo", prodi:{$ref: "prodi", $id: ObjectId("57eb6901539649c28e92f1b8"), $db: "mongodbquery"}})
+9. db.mahasiswa.find()
+10. db.mahasiswa.find({},{"nama": 1, "alamat": 1})
+11. db.mahasiswa.find({"nim":"0003"},{"nim":1, "name":1, "alamat":1})
+12. db.mahasiswa.find().sort({"name":1})
+13. db.prodi.find().sort({"nama_prodi":1})
