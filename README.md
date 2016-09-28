@@ -1,6 +1,6 @@
 # mongodb-query
 
-## 1. Create database "academic"
+### 1. Create database "academic"
 
 ```
 use academic
